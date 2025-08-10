@@ -11,22 +11,23 @@ export default function ScheduleCallButton() {
       animate={{ opacity: 1, scale: 1 }}
       transition={{ duration: 0.8, delay: 1.2 }}
       whileHover={{ scale: 1.1 }}
+      whileTap={{ scale: 0.95 }}
     >
       {/* Button Container */}
       <div className="relative">
         {/* Outer glow */}
-        <div className="absolute inset-0 w-12 h-12 rounded-full bg-gradient-to-r from-purple-500/20 to-pink-500/20 blur-lg" />
+        <div className="absolute inset-0 w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-gradient-to-r from-purple-500/20 to-pink-500/20 blur-lg" />
 
         {/* Button body */}
-        <div className="relative w-12 h-12 rounded-full bg-gradient-to-br from-purple-500 to-pink-500 overflow-hidden border border-purple-500/30 shadow-lg">
+        <div className="relative w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-gradient-to-br from-purple-500 to-pink-500 overflow-hidden border border-purple-500/30 shadow-lg">
           {/* Icon */}
           <div className="flex items-center justify-center w-full h-full">
-            <Calendar className="w-6 h-6 text-white" />
+            <Calendar className="w-6 h-6 sm:w-7 sm:h-7 text-white" />
           </div>
         </div>
 
         {/* Hover effect */}
-        <div className="absolute inset-0 w-12 h-12 rounded-full bg-gradient-to-r from-pink-500/20 to-purple-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+        <div className="absolute inset-0 w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-gradient-to-r from-pink-500/20 to-purple-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
       </div>
 
       {/* Tooltip */}

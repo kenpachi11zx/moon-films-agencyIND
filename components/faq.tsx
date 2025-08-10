@@ -63,10 +63,10 @@ export default function FAQ() {
 
   return (
     <section className="section-container">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <motion.div
-          className="text-center mb-16"
+          className="text-center mb-10"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -75,14 +75,14 @@ export default function FAQ() {
           <h2 className="section-title font-heading">
             FREQUENTLY ASKED QUESTIONS
           </h2>
-          <p className="text-lg text-gray-300 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-base text-gray-300 max-w-2xl mx-auto leading-relaxed">
             Everything you need to know about working with Moon Films
           </p>
         </motion.div>
 
         {/* FAQ Grid */}
         <motion.div
-          className="space-y-4"
+          className="space-y-3"
           variants={container}
           initial="hidden"
           whileInView="show"
@@ -95,31 +95,31 @@ export default function FAQ() {
               className="relative group"
             >
               <div className="relative bg-gradient-to-br from-gray-900/80 to-black/80 backdrop-blur-sm rounded-lg border border-purple-500/20 group-hover:border-opacity-40 transition-all duration-300">
-                {/* Question */}
+                {/* Question - Mobile Optimized */}
                 <button
                   onClick={() => toggleFAQ(index)}
-                  className="w-full px-6 py-4 text-left flex items-center justify-between group-hover:bg-purple-500/5 transition-colors duration-200"
+                  className="w-full px-4 sm:px-5 py-3 sm:py-4 text-left flex items-center justify-between group-hover:bg-purple-500/5 transition-colors duration-200 min-h-[48px] sm:min-h-[52px] touch-manipulation"
                 >
-                  <div className="flex items-center gap-3">
-                    <HelpCircle className="w-5 h-5 text-purple-400 flex-shrink-0" />
-                    <span className="text-white font-medium text-left">
+                  <div className="flex items-center gap-2 sm:gap-3">
+                    <HelpCircle className="w-4 h-4 sm:w-5 sm:h-5 text-purple-400 flex-shrink-0" />
+                    <span className="text-white font-medium text-left text-xs sm:text-sm leading-tight">
                       {faq.question}
                     </span>
                   </div>
                   <ChevronDown 
-                    className={`w-5 h-5 text-purple-400 transition-transform duration-200 flex-shrink-0 ${
+                    className={`w-4 h-4 sm:w-5 sm:h-5 text-purple-400 transition-transform duration-200 flex-shrink-0 ${
                       openIndex === index ? 'rotate-180' : ''
                     }`}
                   />
                 </button>
 
-                {/* Answer */}
+                {/* Answer - Mobile Optimized */}
                 <div className={`overflow-hidden transition-all duration-300 ${
                   openIndex === index ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
                 }`}>
-                  <div className="px-6 pb-4">
-                    <div className="border-t border-purple-500/20 pt-4">
-                      <p className="text-gray-300 leading-relaxed">
+                  <div className="px-4 sm:px-5 pb-3 sm:pb-4">
+                    <div className="border-t border-purple-500/20 pt-3 sm:pt-4">
+                      <p className="text-gray-300 leading-relaxed text-xs sm:text-sm">
                         {faq.answer}
                       </p>
                     </div>
@@ -132,13 +132,13 @@ export default function FAQ() {
 
         {/* Call to Action */}
         <motion.div
-          className="text-center mt-12"
+          className="text-center mt-8"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.3 }}
         >
-          <p className="text-gray-400 mb-4">
+          <p className="text-gray-400 mb-3 text-sm">
             Still have questions? Let's talk!
           </p>
           <motion.button

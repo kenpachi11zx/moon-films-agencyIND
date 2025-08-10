@@ -94,7 +94,7 @@ export default function Contact() {
   }
 
   return (
-    <section id="contact" className="relative py-16">
+    <section id="contact" className="relative py-12 sm:py-16">
       <div className="section-container">
         <motion.h2
           className="section-title font-heading"
@@ -107,153 +107,133 @@ export default function Contact() {
         </motion.h2>
 
         <div className="max-w-4xl mx-auto">
+          {/* Contact Info - Mobile Optimized */}
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            className="flex justify-center items-center gap-6 sm:gap-8 mb-12 sm:mb-16"
+            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-12"
+            transition={{ duration: 0.6, delay: 0.1 }}
           >
-            <h3 className="font-heading text-lg font-medium mb-6 tracking-wide uppercase">CONTACT INFORMATION</h3>
-            <p className="mb-8 text-gray-300 font-normal leading-relaxed tracking-normal max-w-2xl mx-auto">
-              Ready to bring your vision to life? Reach out and let's create something amazing together.
-            </p>
+            <motion.button
+              className="flex flex-col items-center gap-3 sm:gap-4 group"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              onClick={() => window.open('mailto:moonfilms07@gmail.com', '_blank')}
+            >
+              <div className="w-12 h-12 sm:w-14 sm:h-14 bg-gradient-to-r from-pink-500 to-purple-600 rounded-lg flex items-center justify-center group-hover:shadow-lg group-hover:shadow-pink-500/25 transition-all duration-300">
+                <Mail className="w-6 h-6 sm:w-7 sm:h-7 text-white" />
+              </div>
+            </motion.button>
 
+            <motion.button
+              className="flex flex-col items-center gap-3 sm:gap-4 group"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              onClick={() => window.open('tel:+916003021379', '_blank')}
+            >
+              <div className="w-12 h-12 sm:w-14 sm:h-14 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center group-hover:shadow-lg group-hover:shadow-purple-500/25 transition-all duration-300">
+                <Phone className="w-6 h-6 sm:w-7 sm:h-7 text-white" />
+              </div>
+            </motion.button>
 
-
-            {/* Section Divider */}
-            <div className="mb-10">
-              <div className="w-24 h-px bg-gradient-to-r from-transparent via-purple-500 to-transparent mx-auto mb-4"></div>
-              <p className="text-sm text-gray-400 uppercase tracking-wider text-center">QUICK ACTIONS</p>
-            </div>
-
-            {/* Quick Action Buttons */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12 max-w-2xl mx-auto">
-              <a
-                href="mailto:moonfilms07@gmail.com"
-                className="flex flex-col items-center p-6 rounded-lg bg-gradient-to-br from-purple-900/30 to-black/50 border border-purple-500/30 hover:border-pink-500/50 hover:from-pink-500/20 hover:to-purple-500/20 transition-all duration-300 group hover:scale-105"
-              >
-                <div className="w-12 h-12 rounded-full bg-gradient-to-r from-purple-500 to-pink-500 flex items-center justify-center mb-3 group-hover:scale-110 transition-transform duration-300">
-                  <Mail className="w-6 h-6 text-white" />
-                </div>
-                <span className="text-sm font-medium text-white group-hover:text-pink-300 transition-colors duration-300">Send Email</span>
-              </a>
-              <a
-                href="tel:+916003021379"
-                className="flex flex-col items-center p-6 rounded-lg bg-gradient-to-br from-purple-900/30 to-black/50 border border-purple-500/30 hover:border-pink-500/50 hover:from-pink-500/20 hover:to-purple-500/20 transition-all duration-300 group hover:scale-105"
-              >
-                <div className="w-12 h-12 rounded-full bg-gradient-to-r from-purple-500 to-pink-500 flex items-center justify-center mb-3 group-hover:scale-110 transition-transform duration-300">
-                  <Phone className="w-6 h-6 text-white" />
-                </div>
-                <span className="text-sm font-medium text-white group-hover:text-pink-300 transition-colors duration-300">Call Now</span>
-              </a>
-              <a
-                href="https://calendly.com/moonfilms07/30min"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex flex-col items-center p-6 rounded-lg bg-gradient-to-br from-purple-900/30 to-black/50 border border-purple-500/30 hover:border-pink-500/50 hover:from-pink-500/20 hover:to-purple-500/20 transition-all duration-300 group hover:scale-105"
-              >
-                <div className="w-12 h-12 rounded-full bg-gradient-to-r from-purple-500 to-pink-500 flex items-center justify-center mb-3 group-hover:scale-110 transition-transform duration-300">
-                  <Calendar className="w-6 h-6 text-white" />
-                </div>
-                <span className="text-sm font-medium text-white group-hover:text-pink-300 transition-colors duration-300">Schedule Call</span>
-              </a>
-            </div>
+            <motion.button
+              className="flex flex-col items-center gap-3 sm:gap-4 group"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              onClick={() => window.open('https://calendly.com/moonfilms07/30min', '_blank')}
+            >
+              <div className="w-12 h-12 sm:w-14 sm:h-14 bg-gradient-to-r from-pink-500 to-purple-600 rounded-lg flex items-center justify-center group-hover:shadow-lg group-hover:shadow-pink-500/25 transition-all duration-300">
+                <Calendar className="w-6 h-6 sm:w-7 sm:h-7 text-white" />
+              </div>
+            </motion.button>
           </motion.div>
 
-          {/* Form Section Divider */}
-          <div className="mb-12">
-            <div className="w-24 h-px bg-gradient-to-r from-transparent via-pink-500 to-transparent mx-auto mb-4"></div>
-            <p className="text-sm text-gray-400 uppercase tracking-wider text-center">SEND A MESSAGE</p>
-          </div>
-
+          {/* Contact Form - Mobile Optimized */}
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            className="bg-gradient-to-br from-gray-900/80 to-black/80 backdrop-blur-sm rounded-lg border border-purple-500/20 p-4 sm:p-6 lg:p-8"
+            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="max-w-2xl mx-auto"
+            transition={{ duration: 0.6, delay: 0.2 }}
           >
-            <form onSubmit={handleSubmit} className="space-y-6">
-              {formStatus.type && (
-                <div
-                  className={`p-4 rounded-sm border text-center font-medium ${
-                    formStatus.type === "success"
-                      ? "bg-green-500/10 border-green-500/30 text-green-400"
-                      : formStatus.type === "loading"
-                        ? "bg-blue-500/10 border-blue-500/30 text-blue-400"
-                        : "bg-red-500/10 border-red-500/30 text-red-400"
-                  }`}
-                >
-                  {formStatus.message}
+            <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-6">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
+                <div>
+                  <label htmlFor="name" className="block text-sm sm:text-base font-medium text-white mb-2">
+                    Name *
+                  </label>
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    value={formData.name}
+                    onChange={handleChange}
+                    required
+                    className="w-full px-3 sm:px-4 py-3 sm:py-4 bg-gray-800/50 border border-gray-600/30 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500/50 focus:border-purple-500/50 transition-all duration-200 text-sm sm:text-base"
+                    placeholder="Your name"
+                  />
                 </div>
-              )}
 
-              <div>
-                <label
-                  htmlFor="name"
-                  className="font-heading block mb-3 text-sm font-medium tracking-wide uppercase text-center"
-                >
-                  NAME
-                </label>
-                <input
-                  type="text"
-                  id="name"
-                  name="name"
-                  value={formData.name}
-                  onChange={handleChange}
-                  disabled={formStatus.type === "loading"}
-                  className="w-full px-4 py-3 bg-black/50 border border-purple-500/20 rounded-sm focus:outline-none focus:border-pink-500/50 transition-colors font-normal tracking-normal text-center disabled:opacity-50"
-                  placeholder="Your name"
-                />
+                <div>
+                  <label htmlFor="email" className="block text-sm sm:text-base font-medium text-white mb-2">
+                    Email *
+                  </label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    value={formData.email}
+                    onChange={handleChange}
+                    required
+                    className="w-full px-3 sm:px-4 py-3 sm:py-4 bg-gray-800/50 border border-gray-600/30 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500/50 focus:border-purple-500/50 transition-all duration-200 text-sm sm:text-base"
+                    placeholder="your.email@example.com"
+                  />
+                </div>
               </div>
 
               <div>
-                <label
-                  htmlFor="email"
-                  className="font-heading block mb-3 text-sm font-medium tracking-wide uppercase text-center"
-                >
-                  EMAIL
-                </label>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  value={formData.email}
-                  onChange={handleChange}
-                  disabled={formStatus.type === "loading"}
-                  className="w-full px-4 py-3 bg-black/50 border border-purple-500/20 rounded-sm focus:outline-none focus:border-pink-500/50 transition-colors font-normal tracking-normal text-center disabled:opacity-50"
-                  placeholder="your.email@example.com"
-                />
-              </div>
-
-              <div>
-                <label
-                  htmlFor="message"
-                  className="font-heading block mb-3 text-sm font-medium tracking-wide uppercase text-center"
-                >
-                  MESSAGE
+                <label htmlFor="message" className="block text-sm sm:text-base font-medium text-white mb-2">
+                  Message *
                 </label>
                 <textarea
                   id="message"
                   name="message"
                   value={formData.message}
                   onChange={handleChange}
-                  disabled={formStatus.type === "loading"}
-                  rows={5}
-                  className="w-full px-4 py-3 bg-black/50 border border-purple-500/20 rounded-sm focus:outline-none focus:border-pink-500/50 transition-colors font-normal tracking-normal resize-none text-center disabled:opacity-50"
+                  required
+                  rows={6}
+                  className="w-full px-3 sm:px-4 py-3 sm:py-4 bg-gray-800/50 border border-gray-600/30 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500/50 focus:border-purple-500/50 transition-all duration-200 resize-none text-sm sm:text-base"
                   placeholder="Tell me about your project..."
                 />
               </div>
 
+              {/* Form Status */}
+              {formStatus.type && (
+                <motion.div
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  className={`p-3 sm:p-4 rounded-lg text-sm sm:text-base ${
+                    formStatus.type === "success"
+                      ? "bg-green-500/20 border border-green-500/30 text-green-300"
+                      : formStatus.type === "error"
+                      ? "bg-red-500/20 border border-red-500/30 text-red-300"
+                      : "bg-blue-500/20 border border-blue-500/30 text-blue-300"
+                  }`}
+                >
+                  {formStatus.message}
+                </motion.div>
+              )}
+
+              {/* Submit Button - Mobile Optimized */}
               <motion.button
                 type="submit"
                 disabled={formStatus.type === "loading"}
-                className="btn btn-primary w-full disabled:opacity-50 disabled:cursor-not-allowed"
-                whileHover={formStatus.type !== "loading" ? { scale: 1.02 } : {}}
-                whileTap={formStatus.type !== "loading" ? { scale: 0.98 } : {}}
+                className="btn btn-primary w-full min-h-[48px] sm:min-h-[52px] text-sm sm:text-base px-6 sm:px-8 py-3 disabled:opacity-50 disabled:cursor-not-allowed"
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
               >
-                {formStatus.type === "loading" ? "SENDING..." : "SEND MESSAGE"}
+                {formStatus.type === "loading" ? "Sending..." : "Send Message"}
               </motion.button>
             </form>
           </motion.div>

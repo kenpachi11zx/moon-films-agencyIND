@@ -7,6 +7,9 @@ body {
   color: white;
   font-family: var(--font-urbanist), -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu",
     "Cantarell", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
 }
 
 h1,
@@ -22,11 +25,11 @@ h6,
 
 @layer components {
   .section-container {
-    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16;
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 md:py-16;
   }
 
   .section-title {
-    @apply text-xl md:text-2xl font-semibold mb-8 md:mb-12 text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-purple-300 tracking-wide uppercase text-center;
+    @apply text-lg sm:text-xl md:text-2xl font-semibold mb-6 sm:mb-8 md:mb-12 text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-purple-300 tracking-wide uppercase text-center;
   }
 
   .glow {
@@ -44,7 +47,7 @@ h6,
   }
 
   .btn {
-    @apply px-6 py-3 rounded-sm font-medium transition-all duration-300 inline-flex items-center justify-center tracking-wide uppercase text-sm border;
+    @apply px-4 sm:px-6 py-3 rounded-lg sm:rounded-sm font-medium transition-all duration-300 inline-flex items-center justify-center tracking-wide uppercase text-sm border min-h-[44px] sm:min-h-[48px] touch-manipulation;
   }
 
   .btn-primary {
@@ -81,6 +84,42 @@ h6,
       text-shadow: 0 0 20px rgba(236, 72, 153, 0.8), 0 0 30px rgba(236, 72, 153, 0.8), 0 0 40px rgba(236, 72, 153, 0.8);
     }
   }
+
+  /* Mobile-specific optimizations */
+  @media (max-width: 640px) {
+    .btn {
+      @apply w-full justify-center;
+    }
+    
+    .section-container {
+      @apply px-4 py-6;
+    }
+    
+    .section-title {
+      @apply text-lg mb-6;
+    }
+    
+    /* Enhanced mobile spacing */
+    .section-container {
+      @apply py-8;
+    }
+    
+    /* Mobile grid improvements */
+    .grid {
+      @apply gap-4;
+    }
+  }
+
+  /* Touch-friendly interactions */
+  @media (hover: none) and (pointer: coarse) {
+    .btn:hover {
+      transform: none;
+    }
+    
+    .btn:active {
+      transform: scale(0.98);
+    }
+  }
 }
 
 /* Enhanced scrollbar */
@@ -98,39 +137,58 @@ h6,
   box-shadow: 0 0 10px rgba(236, 72, 153, 0.5);
 }
 
-::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(45deg, #f472b6, #c084fc);
-  box-shadow: 0 0 15px rgba(236, 72, 153, 0.8);
-}
-
-/* Hide scrollbar for mobile */
+/* Mobile scrollbar */
 @media (max-width: 768px) {
   ::-webkit-scrollbar {
-    display: none;
+    width: 4px;
   }
 }
 
-/* Smooth transitions for all interactive elements */
+/* Global mobile optimizations */
 * {
-  transition: all 0.3s ease;
+  box-sizing: border-box;
 }
 
-/* Custom selection color */
 ::selection {
   background: rgba(236, 72, 153, 0.3);
   color: white;
 }
 
-/* Focus styles for accessibility */
 button:focus,
-a:focus,
 input:focus,
 textarea:focus {
   outline: 2px solid rgba(236, 72, 153, 0.5);
   outline-offset: 2px;
 }
 
-/* Ensure proper 3D rendering */
 .preserve-3d {
   transform-style: preserve-3d;
+}
+
+/* Mobile touch improvements */
+@media (max-width: 768px) {
+  input, textarea, button, select {
+    font-size: 16px; /* Prevents zoom on iOS */
+  }
+  
+  /* Improve touch targets */
+  button, a, [role="button"] {
+    min-height: 44px;
+    min-width: 44px;
+  }
+  
+  /* Enhanced mobile interactions */
+  .touch-manipulation {
+    touch-action: manipulation;
+  }
+  
+  /* Mobile scroll improvements */
+  .overflow-x-hidden {
+    overflow-x: hidden;
+  }
+  
+  /* Mobile text sizing */
+  h1, h2, h3, h4, h5, h6 {
+    @apply leading-tight;
+  }
 }

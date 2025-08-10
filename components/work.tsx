@@ -66,7 +66,7 @@ export default function Work() {
   }
 
   return (
-    <section id="work" className="relative py-16">
+    <section id="work" className="relative py-12 sm:py-16">
       <div className="section-container">
         <motion.h2
           className="section-title font-heading"
@@ -78,8 +78,9 @@ export default function Work() {
           MY WORK
         </motion.h2>
 
+        {/* Mobile-Optimized Grid */}
         <motion.div
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 max-w-7xl mx-auto"
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 sm:gap-4 max-w-7xl mx-auto"
           variants={container}
           initial="hidden"
           whileInView="show"
@@ -89,41 +90,71 @@ export default function Work() {
             <motion.div
               key={index}
               variants={item}
-              className="relative aspect-video rounded-sm overflow-hidden group cursor-pointer bg-gradient-to-br from-purple-900/30 to-black/30 border border-purple-500/20"
+              className="relative aspect-video rounded-lg sm:rounded-sm overflow-hidden group cursor-pointer bg-gradient-to-br from-purple-900/30 to-black/30 border border-purple-500/20 hover:border-purple-500/40 transition-all duration-300"
               onClick={() => setActiveVideo(video.embedUrl)}
               whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
             >
               <img
                 src={video.thumbnail || "/placeholder.svg"}
                 alt="Video thumbnail"
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
                 onError={(e) => {
-                  e.currentTarget.src = "/placeholder.svg?height=720&width=1280"
+                  const target = e.target as HTMLImageElement
+                  target.src = "/placeholder.svg"
                 }}
               />
+              
+              {/* Play Button Overlay - Mobile Optimized */}
+              <div className="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-all duration-300 flex items-center justify-center">
+                <div className="w-12 h-12 sm:w-16 sm:h-16 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center group-hover:bg-white/30 transition-all duration-300">
+                  <svg
+                    className="w-6 h-6 sm:w-8 sm:h-8 text-white ml-1"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path d="M8 5v14l11-7z" />
+                  </svg>
+                </div>
+              </div>
             </motion.div>
           ))}
         </motion.div>
-      </div>
 
-      {activeVideo && (
-        <div className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-4">
-          <div className="relative w-full max-w-4xl aspect-video">
-            <iframe
-              src={activeVideo}
-              className="w-full h-full rounded-sm"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-            />
-            <button
-              onClick={() => setActiveVideo(null)}
-              className="absolute -top-12 right-0 text-white hover:text-pink-500 transition-colors"
-            >
-              <X className="w-6 h-6" />
-            </button>
-          </div>
-        </div>
-      )}
+        {/* Mobile-Optimized Video Modal */}
+        {activeVideo && (
+          <motion.div
+            className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/90 backdrop-blur-sm"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            onClick={() => setActiveVideo(null)}
+          >
+            <div className="relative w-full max-w-4xl mx-auto">
+              {/* Close Button - Mobile Optimized */}
+              <button
+                onClick={() => setActiveVideo(null)}
+                className="absolute -top-12 sm:-top-16 right-0 z-10 p-2 sm:p-3 bg-white/10 backdrop-blur-sm rounded-full hover:bg-white/20 transition-all duration-200 touch-manipulation"
+                aria-label="Close video"
+              >
+                <X className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
+              </button>
+              
+              {/* Video Container - Mobile Responsive */}
+              <div className="relative w-full aspect-video rounded-lg sm:rounded-sm overflow-hidden">
+                <iframe
+                  src={activeVideo}
+                  title="Video player"
+                  className="w-full h-full"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                />
+              </div>
+            </div>
+          </motion.div>
+        )}
+      </div>
     </section>
   )
 }

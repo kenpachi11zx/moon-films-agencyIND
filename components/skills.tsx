@@ -29,7 +29,7 @@ export default function Skills() {
   }
 
   return (
-    <section id="skills" className="relative py-16 bg-black/50">
+    <section id="skills" className="relative py-12 sm:py-16 bg-black/50">
       <div className="section-container">
         <motion.h2
           className="section-title font-heading"
@@ -41,8 +41,9 @@ export default function Skills() {
           SKILLS
         </motion.h2>
 
+        {/* Mobile-Optimized Skills Grid */}
         <motion.div
-          className="grid grid-cols-3 sm:grid-cols-6 gap-4 max-w-5xl mx-auto"
+          className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-3 sm:gap-4 max-w-5xl mx-auto px-4 sm:px-0"
           variants={container}
           initial="hidden"
           whileInView="show"
@@ -54,16 +55,17 @@ export default function Skills() {
               <motion.div
                 key={index}
                 variants={item}
-                className="bg-gradient-to-br from-purple-900/20 to-black/20 backdrop-blur-sm p-4 rounded-sm border border-purple-500/10 flex flex-col items-center justify-center text-center group"
+                className="bg-gradient-to-br from-purple-900/20 to-black/20 backdrop-blur-sm p-3 sm:p-4 rounded-lg sm:rounded-sm border border-purple-500/10 flex flex-col items-center justify-center text-center group min-h-[80px] sm:min-h-[100px] touch-manipulation"
                 whileHover={{
-                  scale: 1.05,
+                  scale: 1.02,
                   boxShadow: "0 0 15px rgba(236, 72, 153, 0.3)",
                 }}
+                whileTap={{ scale: 0.98 }}
               >
-                <div className="mb-3">
-                  <IconComponent className="w-6 h-6 text-pink-500 group-hover:text-purple-300 transition-colors duration-300" />
+                <div className="mb-2 sm:mb-3">
+                  <IconComponent className="w-5 h-5 sm:w-6 sm:h-6 text-pink-500 group-hover:text-purple-300 transition-colors duration-300" />
                 </div>
-                <h3 className="font-heading text-xs font-medium tracking-normal leading-tight">{skill.name}</h3>
+                <h3 className="font-heading text-xs sm:text-sm font-medium tracking-normal leading-tight px-1">{skill.name}</h3>
               </motion.div>
             )
           })}

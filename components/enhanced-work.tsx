@@ -6,6 +6,69 @@ import { X, Play, Filter } from "lucide-react"
 
 const videos = [
   {
+    url: "https://youtube.com/shorts/ZdlPHcTI6e0",
+    embedUrl: "https://www.youtube.com/embed/ZdlPHcTI6e0",
+    thumbnail: "https://img.youtube.com/vi/ZdlPHcTI6e0/maxresdefault.jpg",
+    category: "Shorts",
+    title: "Shorts",
+    description: "",
+    tools: ["After Effects", "Motion Graphics", "Educational Design"],
+  },
+  {
+    url: "https://youtube.com/shorts/EBnQITCMN3Q",
+    embedUrl: "https://www.youtube.com/embed/EBnQITCMN3Q",
+    thumbnail: "https://img.youtube.com/vi/EBnQITCMN3Q/maxresdefault.jpg",
+    category: "Shorts",
+    title: "Shorts",
+    description: "",
+    tools: ["Premiere Pro", "Quick Cuts", "Trending Audio"],
+  },
+  {
+    url: "https://youtu.be/Lkrep-XuCK0",
+    embedUrl: "https://www.youtube.com/embed/Lkrep-XuCK0",
+    thumbnail: "https://img.youtube.com/vi/Lkrep-XuCK0/maxresdefault.jpg",
+    category: "Shorts",
+    title: "Shorts",
+    description: "",
+    tools: ["Premiere Pro", "Comedy Timing", "Quick Effects"],
+  },
+  {
+    url: "https://youtu.be/eo1W28JDkD4",
+    embedUrl: "https://www.youtube.com/embed/eo1W28JDkD4",
+    thumbnail: "https://img.youtube.com/vi/eo1W28JDkD4/maxresdefault.jpg",
+    category: "Shorts",
+    title: "Shorts",
+    description: "",
+    tools: ["DaVinci Resolve", "Color Grading", "Aesthetic Filters"],
+  },
+  {
+    url: "https://youtube.com/shorts/T8Xi_BUz6Wk?si=RGDIsgwexEgqfq-h",
+    embedUrl: "https://www.youtube.com/embed/T8Xi_BUz6Wk",
+    thumbnail: "https://img.youtube.com/vi/T8Xi_BUz6Wk/maxresdefault.jpg",
+    category: "Shorts",
+    title: "Shorts",
+    description: "Dynamic short-form content with engaging visuals and effects",
+    tools: ["Premiere Pro", "Quick Cuts", "Visual Effects"],
+  },
+  {
+    url: "https://youtube.com/shorts/dO-NkGH_x4w?si=febg4cwlgGV6MAja",
+    embedUrl: "https://www.youtube.com/embed/dO-NkGH_x4w",
+    thumbnail: "https://img.youtube.com/vi/dO-NkGH_x4w/maxresdefault.jpg",
+    category: "Shorts",
+    title: "Shorts",
+    description: "Creative short-form video with innovative editing techniques",
+    tools: ["After Effects", "Motion Graphics", "Creative Transitions"],
+  },
+  {
+    url: "https://youtube.com/shorts/MJgH2ukxYTA?si=TG9Lzfy4SmBkDwxU",
+    embedUrl: "https://www.youtube.com/embed/MJgH2ukxYTA",
+    thumbnail: "https://img.youtube.com/vi/MJgH2ukxYTA/maxresdefault.jpg",
+    category: "Shorts",
+    title: "Shorts",
+    description: "Engaging short-form content with dynamic editing and effects",
+    tools: ["Premiere Pro", "Dynamic Cuts", "Visual Enhancement"],
+  },
+  {
     url: "https://youtu.be/PCDY9Vk4Jww?si=PvTQ156ilO_MxeWT",
     embedUrl: "https://www.youtube.com/embed/PCDY9Vk4Jww",
     thumbnail: "https://img.youtube.com/vi/PCDY9Vk4Jww/maxresdefault.jpg",
@@ -49,69 +112,6 @@ const videos = [
     title: "Promo Video",
     description: "Professional brand video with sleek animations and modern aesthetics",
     tools: ["After Effects", "Color Grading", "Sound Design"],
-  },
-  {
-    url: "https://youtube.com/shorts/EBnQITCMN3Q",
-    embedUrl: "https://www.youtube.com/embed/EBnQITCMN3Q",
-    thumbnail: "https://img.youtube.com/vi/EBnQITCMN3Q/maxresdefault.jpg",
-    category: "Shorts",
-    title: "Shorts",
-    description: "",
-    tools: ["Premiere Pro", "Quick Cuts", "Trending Audio"],
-  },
-  {
-    url: "https://youtu.be/Lkrep-XuCK0",
-    embedUrl: "https://www.youtube.com/embed/Lkrep-XuCK0",
-    thumbnail: "https://img.youtube.com/vi/Lkrep-XuCK0/maxresdefault.jpg",
-    category: "Shorts",
-    title: "Shorts",
-    description: "",
-    tools: ["Premiere Pro", "Comedy Timing", "Quick Effects"],
-  },
-  {
-    url: "https://youtu.be/eo1W28JDkD4",
-    embedUrl: "https://www.youtube.com/embed/eo1W28JDkD4",
-    thumbnail: "https://img.youtube.com/vi/eo1W28JDkD4/maxresdefault.jpg",
-    category: "Shorts",
-    title: "Shorts",
-    description: "",
-    tools: ["DaVinci Resolve", "Color Grading", "Aesthetic Filters"],
-  },
-  {
-    url: "https://youtube.com/shorts/ZdlPHcTI6e0",
-    embedUrl: "https://www.youtube.com/embed/ZdlPHcTI6e0",
-    thumbnail: "https://img.youtube.com/vi/ZdlPHcTI6e0/maxresdefault.jpg",
-    category: "Shorts",
-    title: "Shorts",
-    description: "",
-    tools: ["After Effects", "Motion Graphics", "Educational Design"],
-  },
-  {
-    url: "https://youtube.com/shorts/T8Xi_BUz6Wk?si=RGDIsgwexEgqfq-h",
-    embedUrl: "https://www.youtube.com/embed/T8Xi_BUz6Wk",
-    thumbnail: "https://img.youtube.com/vi/T8Xi_BUz6Wk/maxresdefault.jpg",
-    category: "Shorts",
-    title: "Shorts",
-    description: "Dynamic short-form content with engaging visuals and effects",
-    tools: ["Premiere Pro", "Quick Cuts", "Visual Effects"],
-  },
-  {
-    url: "https://youtube.com/shorts/dO-NkGH_x4w?si=febg4cwlgGV6MAja",
-    embedUrl: "https://www.youtube.com/embed/dO-NkGH_x4w",
-    thumbnail: "https://img.youtube.com/vi/dO-NkGH_x4w/maxresdefault.jpg",
-    category: "Shorts",
-    title: "Shorts",
-    description: "Creative short-form video with innovative editing techniques",
-    tools: ["After Effects", "Motion Graphics", "Creative Transitions"],
-  },
-  {
-    url: "https://youtube.com/shorts/MJgH2ukxYTA?si=TG9Lzfy4SmBkDwxU",
-    embedUrl: "https://www.youtube.com/embed/MJgH2ukxYTA",
-    thumbnail: "https://img.youtube.com/vi/MJgH2ukxYTA/maxresdefault.jpg",
-    category: "Shorts",
-    title: "Shorts",
-    description: "Engaging short-form content with dynamic editing and effects",
-    tools: ["Premiere Pro", "Dynamic Cuts", "Visual Enhancement"],
   },
 ]
 
@@ -161,24 +161,27 @@ export default function EnhancedWork() {
           FEATURED WORK
         </motion.h2>
 
-        {/* Category Filter */}
+        {/* Category Filter - Mobile Optimized */}
         <motion.div
-          className="flex flex-wrap justify-center gap-3 mb-12"
+          className="mb-8 sm:mb-12 px-4 sm:px-0"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.2 }}
         >
-          <div className="flex items-center gap-2 mb-4">
-            <Filter className="w-4 h-4 text-pink-500" />
-            <span className="text-sm font-medium tracking-wide uppercase text-gray-400">Filter by Category:</span>
+          {/* Filter Label - Mobile Optimized */}
+          <div className="flex items-center justify-center gap-2 mb-4 sm:mb-6">
+            <Filter className="w-4 h-4 sm:w-5 sm:h-5 text-pink-500 flex-shrink-0" />
+            <span className="text-xs sm:text-sm font-medium tracking-wide uppercase text-gray-400">Filter by Category:</span>
           </div>
-          <div className="flex flex-wrap justify-center gap-2">
+          
+          {/* Filter Buttons - Mobile Optimized */}
+          <div className="flex flex-wrap justify-center gap-2 sm:gap-3">
             {categories.map((category) => (
               <motion.button
                 key={category}
                 onClick={() => setActiveCategory(category)}
-                className={`px-4 py-2 rounded-sm text-xs font-medium tracking-wide uppercase transition-all duration-300 border ${
+                className={`px-3 sm:px-4 py-2 sm:py-3 rounded-sm text-xs sm:text-sm font-medium tracking-wide uppercase transition-all duration-300 border min-h-[40px] sm:min-h-[44px] touch-manipulation ${
                   activeCategory === category
                     ? "bg-gradient-to-r from-pink-500 to-purple-600 text-white border-transparent glow-border"
                     : "bg-black/30 text-gray-300 border-purple-500/20 hover:border-pink-500/50 hover:text-white"
@@ -193,11 +196,11 @@ export default function EnhancedWork() {
           </div>
         </motion.div>
 
-        {/* Video Grid */}
+        {/* Video Grid - Mobile Optimized */}
         <AnimatePresence mode="wait">
           <motion.div
             key={activeCategory}
-            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 max-w-7xl mx-auto"
+            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 max-w-7xl mx-auto px-4 sm:px-0"
             variants={container}
             initial="hidden"
             animate="show"
