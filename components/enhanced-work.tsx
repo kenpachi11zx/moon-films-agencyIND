@@ -6,6 +6,15 @@ import { X, Play, Filter } from "lucide-react"
 
 const videos = [
   {
+    url: "https://youtube.com/shorts/2TQXkysbZeI?si=nkErqPTyKmjNkRCJ",
+    embedUrl: "https://www.youtube.com/embed/2TQXkysbZeI",
+    thumbnail: "https://img.youtube.com/vi/2TQXkysbZeI/maxresdefault.jpg",
+    category: "Promo Video",
+    title: "Promo Video",
+    description: "Engaging promotional short with dynamic editing and eye-catching visuals",
+    tools: ["Premiere Pro", "Motion Graphics", "Brand Integration"],
+  },
+  {
     url: "https://youtube.com/shorts/ZdlPHcTI6e0",
     embedUrl: "https://www.youtube.com/embed/ZdlPHcTI6e0",
     thumbnail: "https://img.youtube.com/vi/ZdlPHcTI6e0/maxresdefault.jpg",
