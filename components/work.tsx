@@ -6,6 +6,11 @@ import { X } from "lucide-react"
 
 const videos = [
   {
+    url: "https://youtube.com/shorts/2TQXkysbZeI?si=TOmZJywj20Pb-TWG",
+    embedUrl: "https://www.youtube.com/embed/2TQXkysbZeI?si=TOmZJywj20Pb-TWG",
+    thumbnail: "https://img.youtube.com/vi/2TQXkysbZeI?si=TOmZJywj20Pb-TWG/maxresdefault.jpg",
+  },
+  {
     url: "https://youtu.be/L2I2QvAK54E",
     embedUrl: "https://www.youtube.com/embed/L2I2QvAK54E",
     thumbnail: "https://img.youtube.com/vi/L2I2QvAK54E/maxresdefault.jpg",
