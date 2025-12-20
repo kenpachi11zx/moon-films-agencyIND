@@ -7,7 +7,6 @@ import About from "@/components/about"
 import EditingStyles from "@/components/editing-styles"
 import EnhancedWork from "@/components/enhanced-work"
 import Skills from "@/components/skills"
-import Pricing from "@/components/pricing"
 import Testimonials from "@/components/testimonials"
 import FAQ from "@/components/faq"
 import Contact from "@/components/contact"
@@ -44,7 +43,6 @@ export default function Home() {
           <Skills />
           <Testimonials />
           <FAQ />
-          <Pricing />
           <Contact />
           <Footer />
         </div>

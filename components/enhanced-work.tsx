@@ -162,8 +162,6 @@ export default function EnhancedWork() {
       scale: 1,
       transition: {
         duration: 0.6,
-        type: "spring",
-        stiffness: 100,
       },
     },
   }
