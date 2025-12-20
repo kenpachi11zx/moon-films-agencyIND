@@ -138,8 +138,8 @@ export default function EnhancedWork() {
   // Generate enhanced video URL with autoplay for mobile
   const getVideoUrl = (baseUrl: string) => {
     if (isMobile) {
-      // Add parameters for faster loading on mobile
-      return `${baseUrl}?autoplay=1&mute=1&modestbranding=1&rel=0&showinfo=0&iv_load_policy=3&playsinline=1`
+      // Add parameters for faster loading on mobile with sound
+      return `${baseUrl}?autoplay=1&modestbranding=1&rel=0&showinfo=0&iv_load_policy=3&playsinline=1`
     }
     return `${baseUrl}?modestbranding=1&rel=0&showinfo=0&iv_load_policy=3`
   }
