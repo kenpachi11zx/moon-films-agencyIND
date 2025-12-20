@@ -6,7 +6,6 @@ import Hero from "@/components/hero"
 import About from "@/components/about"
 import EditingStyles from "@/components/editing-styles"
 import EnhancedWork from "@/components/enhanced-work"
-import Skills from "@/components/skills"
 import Testimonials from "@/components/testimonials"
 import FAQ from "@/components/faq"
 import Contact from "@/components/contact"
@@ -40,7 +39,6 @@ export default function Home() {
           <About />
           <EditingStyles />
           <EnhancedWork />
-          <Skills />
           <Testimonials />
           <FAQ />
           <Contact />

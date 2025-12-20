@@ -7,8 +7,8 @@ import { Home, User, Briefcase, Star, MessageCircle, Phone, Menu, X } from "luci
 const navItems = [
   { name: "Home", href: "#hero", icon: Home },
   { name: "About", href: "#about", icon: User },
+  { name: "Skills", href: "#editing-styles", icon: Star },
   { name: "Work", href: "#work", icon: Briefcase },
-  { name: "Skills", href: "#skills", icon: Star },
   { name: "Contact", href: "#contact", icon: Phone },
 ]
 
