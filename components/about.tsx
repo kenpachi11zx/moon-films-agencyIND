@@ -47,7 +47,8 @@ export default function About() {
             className="text-center px-4 sm:px-0"
           >
             <p className="text-base sm:text-lg mb-8 sm:mb-10 text-gray-300 font-normal leading-relaxed tracking-normal max-w-3xl mx-auto">
-              We are a creative video editing agency specializing in rhythm-driven storytelling that connects with audiences on an emotional level. With a precise cinematic eye and a refined sense of pacing, we transform raw footage into compelling visual narratives. Every frame is crafted with intention, every sequence built to inspire, engage, and elevate your brand.
+              Moonfilms Creative is a visual storytelling studio turning raw footage into cinematic narratives.
+              We craft rhythm-driven edits that capture attention, spark emotion, and elevate brands.
             </p>
 
             {/* Info Cards - Mobile Optimized */}

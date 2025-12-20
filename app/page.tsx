@@ -18,6 +18,7 @@ import PageLoader from "@/components/page-loader"
 import ScrollProgress from "@/components/scroll-progress"
 import MoonPhaseIndicator from "@/components/moon-phase-indicator"
 import ScheduleCallButton from "@/components/schedule-call-button"
+import Navigation from "@/components/navigation"
 
 export default function Home() {
   const containerRef = useRef(null)
@@ -25,6 +26,7 @@ export default function Home() {
   return (
     <>
       <PageLoader />
+      <Navigation />
       <SmoothScroll />
       <ScrollProgress />
       <MoonPhaseIndicator />

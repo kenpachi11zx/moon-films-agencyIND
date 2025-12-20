@@ -28,7 +28,7 @@ export default function Hero() {
 
           <h1 className="font-heading text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-4 sm:mb-6 glow tracking-wide text-center leading-tight">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-purple-300">
-              MOON FILMS
+              MOONFILMS CREATIVE
             </span>
           </h1>
           

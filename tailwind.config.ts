@@ -11,8 +11,8 @@ const config: Config = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ["var(--font-urbanist)"],
-        heading: ["var(--font-sora)"],
+        sans: ["var(--font-inter)"],
+        heading: ["var(--font-syne)"],
       },
       colors: {
         primary: {

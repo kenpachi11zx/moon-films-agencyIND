@@ -6,7 +6,7 @@ import { Calendar } from "lucide-react"
 export default function ScheduleCallButton() {
   return (
     <motion.div
-      className="fixed top-4 right-4 z-50 group cursor-pointer"
+      className="fixed top-4 left-4 z-50 group cursor-pointer"
       initial={{ opacity: 0, scale: 0.8 }}
       animate={{ opacity: 1, scale: 1 }}
       transition={{ duration: 0.8, delay: 1.2 }}
@@ -31,10 +31,10 @@ export default function ScheduleCallButton() {
       </div>
 
       {/* Tooltip */}
-      <div className="absolute right-16 top-1/2 transform -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+      <div className="absolute left-16 top-1/2 transform -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
         <div className="bg-gray-900/90 backdrop-blur-sm text-white px-3 py-2 rounded-lg text-sm font-medium whitespace-nowrap border border-gray-700/50">
           Schedule a Call
-          <div className="absolute left-full top-1/2 transform -translate-y-1/2 w-2 h-2 bg-gray-900/90 rotate-45 border-r border-b border-gray-700/50"></div>
+          <div className="absolute right-full top-1/2 transform -translate-y-1/2 w-2 h-2 bg-gray-900/90 rotate-45 border-l border-t border-gray-700/50"></div>
         </div>
       </div>
 

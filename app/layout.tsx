@@ -1,25 +1,25 @@
 import type React from "react"
 import type { Metadata } from "next"
-import { Sora, Urbanist } from "next/font/google"
+import { Inter, Syne } from "next/font/google"
 import "./globals.css"
 
-// Initialize the Sora font for headings
-const sora = Sora({
+// Initialize the Syne font for headings
+const syne = Syne({
   subsets: ["latin"],
   display: "swap",
-  variable: "--font-sora",
+  variable: "--font-syne",
 })
 
-// Initialize the Urbanist font for body text
-const urbanist = Urbanist({
+// Initialize the Inter font for body text
+const inter = Inter({
   subsets: ["latin"],
   display: "swap",
-  variable: "--font-urbanist",
+  variable: "--font-inter",
 })
 
 export const metadata: Metadata = {
-  title: "Moon Films | Video Editing & Visual Storytelling",
-  description: "Turning moments into motion. Professional video editing services by Moon Films.",
+  title: "Moonfilms Creative | Video Editing & Visual Storytelling",
+  description: "Turning moments into motion. Professional video editing services by Moonfilms Creative.",
   generator: 'v0.dev',
   viewport: {
     width: 'device-width',
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
   appleWebApp: {
     capable: true,
     statusBarStyle: 'default',
-    title: 'Moon Films',
+    title: 'Moonfilms Creative',
   },
   formatDetection: {
     telephone: false,
@@ -44,7 +44,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className={`scroll-smooth ${sora.variable} ${urbanist.variable}`}>
+    <html lang="en" className={`scroll-smooth ${syne.variable} ${inter.variable}`}>
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5, user-scalable=yes" />
         <meta name="theme-color" content="#000000" />

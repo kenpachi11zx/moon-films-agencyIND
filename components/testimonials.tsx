@@ -136,7 +136,7 @@ export default function Testimonials() {
 
         {/* Enhanced Mobile-Optimized Testimonials Grid */}
         <motion.div
-          className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 max-w-6xl mx-auto"
+          className="grid grid-cols-2 lg:grid-cols-2 gap-6 sm:gap-8 max-w-6xl mx-auto"
           variants={container}
           initial="hidden"
           whileInView="show"

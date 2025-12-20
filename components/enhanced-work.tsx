@@ -6,7 +6,25 @@ import { X, Play, Filter } from "lucide-react"
 
 const videos = [
   {
-    url: "https://youtube.com/shorts/2TQXkysbZeI?si=nkErqPTyKmjNkRCJ",
+    url: "https://youtu.be/Zn2mY9Vxoc0",
+    embedUrl: "https://www.youtube.com/embed/Zn2mY9Vxoc0",
+    thumbnail: "https://img.youtube.com/vi/Zn2mY9Vxoc0/maxresdefault.jpg",
+    category: "Shorts",
+    title: "Shorts",
+    description: "Captivating short-form video with professional transitions and effects",
+    tools: ["DaVinci Resolve", "Color Grading", "Sound Design"],
+  },
+  {
+    url: "https://youtu.be/DwcAi6--Hds",
+    embedUrl: "https://www.youtube.com/embed/DwcAi6--Hds",
+    thumbnail: "https://img.youtube.com/vi/DwcAi6--Hds/maxresdefault.jpg",
+    category: "Shorts",
+    title: "Shorts",
+    description: "Creative short-form video with innovative editing techniques",
+    tools: ["After Effects", "Motion Graphics", "Creative Transitions"],
+  },
+  {
+    url: "https://youtu.be/2TQXkysbZeI",
     embedUrl: "https://www.youtube.com/embed/2TQXkysbZeI",
     thumbnail: "https://img.youtube.com/vi/2TQXkysbZeI/maxresdefault.jpg",
     category: "Promo Video",
@@ -15,70 +33,52 @@ const videos = [
     tools: ["Premiere Pro", "Motion Graphics", "Brand Integration"],
   },
   {
-    url: "https://youtube.com/shorts/ZdlPHcTI6e0",
-    embedUrl: "https://www.youtube.com/embed/ZdlPHcTI6e0",
-    thumbnail: "https://img.youtube.com/vi/ZdlPHcTI6e0/maxresdefault.jpg",
-    category: "Shorts",
-    title: "Shorts",
-    description: "",
-    tools: ["After Effects", "Motion Graphics", "Educational Design"],
-  },
-  {
-    url: "https://youtube.com/shorts/EBnQITCMN3Q",
-    embedUrl: "https://www.youtube.com/embed/EBnQITCMN3Q",
-    thumbnail: "https://img.youtube.com/vi/EBnQITCMN3Q/maxresdefault.jpg",
-    category: "Shorts",
-    title: "Shorts",
-    description: "",
-    tools: ["Premiere Pro", "Quick Cuts", "Trending Audio"],
-  },
-  {
-    url: "https://youtu.be/Lkrep-XuCK0",
-    embedUrl: "https://www.youtube.com/embed/Lkrep-XuCK0",
-    thumbnail: "https://img.youtube.com/vi/Lkrep-XuCK0/maxresdefault.jpg",
-    category: "Shorts",
-    title: "Shorts",
-    description: "",
-    tools: ["Premiere Pro", "Comedy Timing", "Quick Effects"],
-  },
-  {
-    url: "https://youtu.be/eo1W28JDkD4",
-    embedUrl: "https://www.youtube.com/embed/eo1W28JDkD4",
-    thumbnail: "https://img.youtube.com/vi/eo1W28JDkD4/maxresdefault.jpg",
-    category: "Shorts",
-    title: "Shorts",
-    description: "",
-    tools: ["DaVinci Resolve", "Color Grading", "Aesthetic Filters"],
-  },
-  {
-    url: "https://youtube.com/shorts/T8Xi_BUz6Wk?si=RGDIsgwexEgqfq-h",
-    embedUrl: "https://www.youtube.com/embed/T8Xi_BUz6Wk",
-    thumbnail: "https://img.youtube.com/vi/T8Xi_BUz6Wk/maxresdefault.jpg",
-    category: "Shorts",
-    title: "Shorts",
-    description: "Dynamic short-form content with engaging visuals and effects",
-    tools: ["Premiere Pro", "Quick Cuts", "Visual Effects"],
-  },
-  {
-    url: "https://youtube.com/shorts/dO-NkGH_x4w?si=febg4cwlgGV6MAja",
-    embedUrl: "https://www.youtube.com/embed/dO-NkGH_x4w",
-    thumbnail: "https://img.youtube.com/vi/dO-NkGH_x4w/maxresdefault.jpg",
-    category: "Shorts",
-    title: "Shorts",
-    description: "Creative short-form video with innovative editing techniques",
-    tools: ["After Effects", "Motion Graphics", "Creative Transitions"],
-  },
-  {
-    url: "https://youtube.com/shorts/MJgH2ukxYTA?si=TG9Lzfy4SmBkDwxU",
-    embedUrl: "https://www.youtube.com/embed/MJgH2ukxYTA",
-    thumbnail: "https://img.youtube.com/vi/MJgH2ukxYTA/maxresdefault.jpg",
+    url: "https://youtu.be/A_pjZlCbjZY",
+    embedUrl: "https://www.youtube.com/embed/A_pjZlCbjZY",
+    thumbnail: "https://img.youtube.com/vi/A_pjZlCbjZY/maxresdefault.jpg",
     category: "Shorts",
     title: "Shorts",
     description: "Engaging short-form content with dynamic editing and effects",
     tools: ["Premiere Pro", "Dynamic Cuts", "Visual Enhancement"],
   },
   {
-    url: "https://youtu.be/PCDY9Vk4Jww?si=PvTQ156ilO_MxeWT",
+    url: "https://youtube.com/shorts/iU77IvkR4kg?si=16aRR1XqvoqqSpSf",
+    embedUrl: "https://www.youtube.com/embed/iU77IvkR4kg",
+    thumbnail: "https://img.youtube.com/vi/iU77IvkR4kg/maxresdefault.jpg",
+    category: "Shorts",
+    title: "Shorts",
+    description: "Dynamic short-form content with engaging storytelling and effects",
+    tools: ["Premiere Pro", "Quick Cuts", "Visual Effects"],
+  },
+  {
+    url: "https://youtube.com/shorts/pmjQtbElYkA?si=y0atShH6Rxp_VPJ8",
+    embedUrl: "https://www.youtube.com/embed/pmjQtbElYkA",
+    thumbnail: "https://img.youtube.com/vi/pmjQtbElYkA/maxresdefault.jpg",
+    category: "Shorts",
+    title: "Shorts",
+    description: "Creative short-form video with innovative editing techniques",
+    tools: ["After Effects", "Motion Graphics", "Creative Transitions"],
+  },
+  {
+    url: "https://youtube.com/shorts/b4qeBUIckK0?si=aFHGN-kCIN6PqgxB",
+    embedUrl: "https://www.youtube.com/embed/b4qeBUIckK0",
+    thumbnail: "https://img.youtube.com/vi/b4qeBUIckK0/maxresdefault.jpg",
+    category: "Shorts",
+    title: "Shorts",
+    description: "Engaging short-form content with dynamic editing and effects",
+    tools: ["Premiere Pro", "Dynamic Cuts", "Visual Enhancement"],
+  },
+  {
+    url: "https://youtu.be/K_eIt2RIYNE",
+    embedUrl: "https://www.youtube.com/embed/K_eIt2RIYNE",
+    thumbnail: "https://img.youtube.com/vi/K_eIt2RIYNE/maxresdefault.jpg",
+    category: "Shorts",
+    title: "Shorts",
+    description: "Dynamic short-form content with engaging storytelling and effects",
+    tools: ["Premiere Pro", "Quick Cuts", "Visual Effects"],
+  },
+  {
+    url: "https://youtu.be/PCDY9Vk4Jww",
     embedUrl: "https://www.youtube.com/embed/PCDY9Vk4Jww",
     thumbnail: "https://img.youtube.com/vi/PCDY9Vk4Jww/maxresdefault.jpg",
     category: "Automotive",
@@ -96,7 +96,7 @@ const videos = [
     tools: ["Premiere Pro", "After Effects", "Color Grading"],
   },
   {
-    url: "https://www.youtube.com/watch?v=PHPdOiyTW4o",
+    url: "https://youtu.be/PHPdOiyTW4o",
     embedUrl: "https://www.youtube.com/embed/PHPdOiyTW4o",
     thumbnail: "https://img.youtube.com/vi/PHPdOiyTW4o/maxresdefault.jpg",
     category: "Vlog",
@@ -112,15 +112,6 @@ const videos = [
     title: "Podcast",
     description: "Engaging podcast clips with animated graphics and subtitles",
     tools: ["Premiere Pro", "Motion Graphics", "Audio Sync"],
-  },
-  {
-    url: "https://youtu.be/EqL9PeK1k9I",
-    embedUrl: "https://www.youtube.com/embed/EqL9PeK1k9I",
-    thumbnail: "https://img.youtube.com/vi/EqL9PeK1k9I/maxresdefault.jpg",
-    category: "Promo Video",
-    title: "Promo Video",
-    description: "Professional brand video with sleek animations and modern aesthetics",
-    tools: ["After Effects", "Color Grading", "Sound Design"],
   },
 ]
 
@@ -209,7 +200,7 @@ export default function EnhancedWork() {
         <AnimatePresence mode="wait">
           <motion.div
             key={activeCategory}
-            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 max-w-7xl mx-auto px-4 sm:px-0"
+            className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 max-w-7xl mx-auto px-4 sm:px-0"
             variants={container}
             initial="hidden"
             animate="show"
