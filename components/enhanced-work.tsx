@@ -196,12 +196,12 @@ export default function EnhancedWork() {
           </div>
           
           {/* Filter Buttons - Mobile Optimized */}
-          <div className="flex flex-wrap justify-center gap-2 sm:gap-3">
+          <div className="flex flex-nowrap justify-center gap-1 sm:gap-3 overflow-x-auto pb-2 sm:pb-0">
             {categories.map((category) => (
               <motion.button
                 key={category}
                 onClick={() => setActiveCategory(category)}
-                className={`px-3 sm:px-4 py-2 sm:py-3 rounded-sm text-xs sm:text-sm font-medium tracking-wide uppercase transition-all duration-300 border min-h-[40px] sm:min-h-[44px] touch-manipulation ${
+                className={`px-2 sm:px-4 py-2 sm:py-3 rounded-sm text-xs sm:text-sm font-medium tracking-wide uppercase transition-all duration-300 border min-h-[36px] sm:min-h-[44px] touch-manipulation whitespace-nowrap ${
                   activeCategory === category
                     ? "bg-gradient-to-r from-pink-500 to-purple-600 text-white border-transparent glow-border"
                     : "bg-black/30 text-gray-300 border-purple-500/20 hover:border-pink-500/50 hover:text-white"

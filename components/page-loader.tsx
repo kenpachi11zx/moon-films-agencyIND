@@ -147,7 +147,7 @@ export default function PageLoader() {
               transition={{ duration: 0.8, delay: 1 }}
             >
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-purple-300">
-                MOON FILMS
+                MOONFILMS CREATIVE
               </span>
             </motion.h1>
 
