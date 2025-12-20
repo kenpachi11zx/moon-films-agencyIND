@@ -196,7 +196,7 @@ export default function EnhancedWork() {
           </div>
           
           {/* Filter Buttons - Mobile Optimized */}
-          <div className="flex flex-nowrap justify-center gap-1 sm:gap-3 overflow-x-auto pb-2 sm:pb-0">
+          <div className="flex flex-wrap justify-center gap-1 sm:gap-3 sm:flex-nowrap sm:overflow-x-auto pb-2 sm:pb-0">
             {categories.map((category) => (
               <motion.button
                 key={category}
