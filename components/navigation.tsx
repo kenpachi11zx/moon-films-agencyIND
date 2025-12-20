@@ -91,7 +91,7 @@ export default function Navigation() {
               animate={{ opacity: 1, y: 0, scale: 1 }}
               exit={{ opacity: 0, y: -20, scale: 0.95 }}
               transition={{ duration: 0.3, ease: "easeOut" }}
-              className="absolute top-20 right-6 backdrop-blur-[9px] bg-[rgba(13,13,13,0.3)] border-0 rounded-[44px] p-[20px_15px] shadow-2xl min-w-[200px]"
+              className="absolute top-20 right-4 left-4 backdrop-blur-[9px] bg-[rgba(13,13,13,0.95)] border border-white/10 rounded-[16px] p-6 shadow-2xl min-w-0 max-w-none"
             >
               <ul className="space-y-4">
                 {navItems.map((item, index) => (
