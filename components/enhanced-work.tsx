@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import { X, Play, Filter } from "lucide-react"
 
@@ -9,8 +9,8 @@ const videos = [
     url: "https://youtu.be/Zn2mY9Vxoc0",
     embedUrl: "https://www.youtube.com/embed/Zn2mY9Vxoc0",
     thumbnail: "https://img.youtube.com/vi/Zn2mY9Vxoc0/maxresdefault.jpg",
-    category: "Shorts",
-    title: "Shorts",
+    category: "Brand Reel",
+    title: "Brand Reel",
     description: "Captivating short-form video with professional transitions and effects",
     tools: ["DaVinci Resolve", "Color Grading", "Sound Design"],
   },
@@ -18,8 +18,8 @@ const videos = [
     url: "https://youtu.be/DwcAi6--Hds",
     embedUrl: "https://www.youtube.com/embed/DwcAi6--Hds",
     thumbnail: "https://img.youtube.com/vi/DwcAi6--Hds/maxresdefault.jpg",
-    category: "Shorts",
-    title: "Shorts",
+    category: "Brand Reel",
+    title: "Brand Reel",
     description: "Creative short-form video with innovative editing techniques",
     tools: ["After Effects", "Motion Graphics", "Creative Transitions"],
   },
@@ -27,8 +27,8 @@ const videos = [
     url: "https://youtu.be/2TQXkysbZeI",
     embedUrl: "https://www.youtube.com/embed/2TQXkysbZeI",
     thumbnail: "https://img.youtube.com/vi/2TQXkysbZeI/maxresdefault.jpg",
-    category: "Promo Video",
-    title: "Promo Video",
+    category: "Brand Reel",
+    title: "Brand Reel",
     description: "Engaging promotional short with dynamic editing and eye-catching visuals",
     tools: ["Premiere Pro", "Motion Graphics", "Brand Integration"],
   },
@@ -36,8 +36,8 @@ const videos = [
     url: "https://youtu.be/A_pjZlCbjZY",
     embedUrl: "https://www.youtube.com/embed/A_pjZlCbjZY",
     thumbnail: "https://img.youtube.com/vi/A_pjZlCbjZY/maxresdefault.jpg",
-    category: "Shorts",
-    title: "Shorts",
+    category: "Brand Reel",
+    title: "Brand Reel",
     description: "Engaging short-form content with dynamic editing and effects",
     tools: ["Premiere Pro", "Dynamic Cuts", "Visual Enhancement"],
   },
@@ -45,8 +45,8 @@ const videos = [
     url: "https://youtube.com/shorts/iU77IvkR4kg?si=16aRR1XqvoqqSpSf",
     embedUrl: "https://www.youtube.com/embed/iU77IvkR4kg",
     thumbnail: "https://img.youtube.com/vi/iU77IvkR4kg/maxresdefault.jpg",
-    category: "Shorts",
-    title: "Shorts",
+    category: "Fitness",
+    title: "Fitness",
     description: "Dynamic short-form content with engaging storytelling and effects",
     tools: ["Premiere Pro", "Quick Cuts", "Visual Effects"],
   },
@@ -54,8 +54,8 @@ const videos = [
     url: "https://youtube.com/shorts/pmjQtbElYkA?si=y0atShH6Rxp_VPJ8",
     embedUrl: "https://www.youtube.com/embed/pmjQtbElYkA",
     thumbnail: "https://img.youtube.com/vi/pmjQtbElYkA/maxresdefault.jpg",
-    category: "Shorts",
-    title: "Shorts",
+    category: "Fitness",
+    title: "Fitness",
     description: "Creative short-form video with innovative editing techniques",
     tools: ["After Effects", "Motion Graphics", "Creative Transitions"],
   },
@@ -63,8 +63,8 @@ const videos = [
     url: "https://youtube.com/shorts/b4qeBUIckK0?si=aFHGN-kCIN6PqgxB",
     embedUrl: "https://www.youtube.com/embed/b4qeBUIckK0",
     thumbnail: "https://img.youtube.com/vi/b4qeBUIckK0/maxresdefault.jpg",
-    category: "Shorts",
-    title: "Shorts",
+    category: "Brand Reel",
+    title: "Brand Reel",
     description: "Engaging short-form content with dynamic editing and effects",
     tools: ["Premiere Pro", "Dynamic Cuts", "Visual Enhancement"],
   },
@@ -72,8 +72,8 @@ const videos = [
     url: "https://youtu.be/K_eIt2RIYNE",
     embedUrl: "https://www.youtube.com/embed/K_eIt2RIYNE",
     thumbnail: "https://img.youtube.com/vi/K_eIt2RIYNE/maxresdefault.jpg",
-    category: "Shorts",
-    title: "Shorts",
+    category: "Velocity",
+    title: "Velocity",
     description: "Dynamic short-form content with engaging storytelling and effects",
     tools: ["Premiere Pro", "Quick Cuts", "Visual Effects"],
   },
@@ -81,8 +81,8 @@ const videos = [
     url: "https://youtu.be/PCDY9Vk4Jww",
     embedUrl: "https://www.youtube.com/embed/PCDY9Vk4Jww",
     thumbnail: "https://img.youtube.com/vi/PCDY9Vk4Jww/maxresdefault.jpg",
-    category: "Automotive",
-    title: "Featured Work",
+    category: "Velocity",
+    title: "Velocity",
     description: "Latest video editing showcase with professional transitions and effects",
     tools: ["Premiere Pro", "After Effects", "Motion Graphics"],
   },
@@ -115,14 +115,34 @@ const videos = [
   },
 ]
 
-const categories = ["All", "Automotive", "Fitness", "Vlog", "Podcast", "Promo Video", "Shorts"]
+const categories = ["All", "Velocity", "Fitness", "Vlog", "Podcast", "Brand Reel"]
 
 export default function EnhancedWork() {
   const [activeVideo, setActiveVideo] = useState<string | null>(null)
   const [hoveredVideo, setHoveredVideo] = useState<number | null>(null)
   const [activeCategory, setActiveCategory] = useState("All")
+  const [isMobile, setIsMobile] = useState(false)
+
+  // Detect mobile device
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768)
+    }
+    checkMobile()
+    window.addEventListener('resize', checkMobile)
+    return () => window.removeEventListener('resize', checkMobile)
+  }, [])
 
   const filteredVideos = activeCategory === "All" ? videos : videos.filter((video) => video.category === activeCategory)
+
+  // Generate enhanced video URL with autoplay for mobile
+  const getVideoUrl = (baseUrl: string) => {
+    if (isMobile) {
+      // Add parameters for faster loading on mobile
+      return `${baseUrl}?autoplay=1&mute=1&modestbranding=1&rel=0&showinfo=0&iv_load_policy=3&playsinline=1`
+    }
+    return `${baseUrl}?modestbranding=1&rel=0&showinfo=0&iv_load_policy=3`
+  }
 
   const container = {
     hidden: { opacity: 0 },
@@ -176,12 +196,12 @@ export default function EnhancedWork() {
           </div>
           
           {/* Filter Buttons - Mobile Optimized */}
-          <div className="flex flex-wrap justify-center gap-2 sm:gap-3">
+          <div className="flex flex-nowrap justify-center gap-1 sm:gap-3 overflow-x-auto pb-2 sm:pb-0">
             {categories.map((category) => (
               <motion.button
                 key={category}
                 onClick={() => setActiveCategory(category)}
-                className={`px-3 sm:px-4 py-2 sm:py-3 rounded-sm text-xs sm:text-sm font-medium tracking-wide uppercase transition-all duration-300 border min-h-[40px] sm:min-h-[44px] touch-manipulation ${
+                className={`px-2 sm:px-4 py-2 sm:py-3 rounded-sm text-xs sm:text-sm font-medium tracking-wide uppercase transition-all duration-300 border min-h-[36px] sm:min-h-[44px] touch-manipulation whitespace-nowrap ${
                   activeCategory === category
                     ? "bg-gradient-to-r from-pink-500 to-purple-600 text-white border-transparent glow-border"
                     : "bg-black/30 text-gray-300 border-purple-500/20 hover:border-pink-500/50 hover:text-white"
@@ -303,7 +323,7 @@ export default function EnhancedWork() {
       <AnimatePresence>
         {activeVideo && (
           <motion.div
-            className="fixed inset-0 bg-black/95 z-50 flex items-center justify-center p-4"
+            className={`fixed inset-0 bg-black/95 z-50 flex items-center justify-center ${isMobile ? 'p-4' : 'p-4'}`}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
@@ -313,7 +333,7 @@ export default function EnhancedWork() {
             <div className="absolute inset-0 backdrop-blur-sm" />
 
             <motion.div
-              className="relative w-full max-w-6xl aspect-video z-10"
+              className={`relative ${isMobile ? 'w-[80%] h-[80%]' : 'w-full max-w-6xl aspect-video'} z-10`}
               initial={{ scale: 0.8, opacity: 0, rotateX: -15 }}
               animate={{ scale: 1, opacity: 1, rotateX: 0 }}
               exit={{ scale: 0.8, opacity: 0, rotateX: 15 }}
@@ -323,7 +343,7 @@ export default function EnhancedWork() {
               <div className="absolute -inset-4 bg-gradient-to-r from-pink-500/20 to-purple-500/20 rounded-xl blur-xl" />
 
               <iframe
-                src={activeVideo}
+                src={getVideoUrl(activeVideo)}
                 className="w-full h-full rounded-lg border-2 border-purple-500/30 glow-border shadow-2xl"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen

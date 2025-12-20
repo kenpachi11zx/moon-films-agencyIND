@@ -18,14 +18,6 @@ const faqs = [
     answer: "Revision limits vary by package: Basic Pack (2 revisions), Super Pack (3 revisions), and Premium Pack (unlimited revisions). We want you to be completely satisfied with the final result."
   },
   {
-    question: "Do you provide music and sound effects?",
-    answer: "Yes! We include trending audio and copyright-free music in all packages. For Premium Pack clients, we also offer custom sound design for long-form videos. We ensure all music is properly licensed and safe for commercial use."
-  },
-  {
-    question: "Can you match my brand's visual style?",
-    answer: "Absolutely! We create custom templates, color schemes, and typography that perfectly match your brand identity. This is included in Super and Premium packages, ensuring consistent branding across all your content."
-  },
-  {
     question: "What if I need changes after delivery?",
     answer: "Minor adjustments are included in your revision allowance. For significant changes beyond the scope of your package, we offer additional editing services at competitive rates. We're committed to your satisfaction."
   },

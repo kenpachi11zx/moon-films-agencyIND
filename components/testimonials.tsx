@@ -136,7 +136,7 @@ export default function Testimonials() {
 
         {/* Enhanced Mobile-Optimized Testimonials Grid */}
         <motion.div
-          className="grid grid-cols-2 lg:grid-cols-2 gap-6 sm:gap-8 max-w-6xl mx-auto"
+          className="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-8 max-w-6xl mx-auto"
           variants={container}
           initial="hidden"
           whileInView="show"
@@ -146,7 +146,7 @@ export default function Testimonials() {
             <motion.div
               key={index}
               variants={item}
-              className="group bg-gradient-to-br from-gray-900/90 to-black/90 backdrop-blur-sm rounded-lg sm:rounded-sm border border-purple-500/20 p-4 sm:p-6 hover:border-purple-500/40 transition-all duration-500 ease-out transform hover:scale-[1.02] hover:shadow-2xl hover:shadow-purple-500/20"
+              className="group bg-gradient-to-br from-gray-900/90 to-black/90 backdrop-blur-sm rounded-lg sm:rounded-sm border border-purple-500/20 p-2 sm:p-6 hover:border-purple-500/40 transition-all duration-500 ease-out transform hover:scale-[1.02] hover:shadow-2xl hover:shadow-purple-500/20"
               whileHover={{ 
                 y: -5,
                 transition: { duration: 0.3, ease: "easeOut" }
@@ -155,14 +155,14 @@ export default function Testimonials() {
             >
               {/* Enhanced Header with smooth animations */}
               <motion.div 
-                className="flex items-start gap-3 sm:gap-4 mb-4 sm:mb-5"
+                className="flex items-start gap-1.5 sm:gap-4 mb-2 sm:mb-5"
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
               >
                 <motion.div 
-                  className="relative w-12 h-12 sm:w-14 sm:h-14 flex-shrink-0"
+                  className="relative w-10 h-10 sm:w-14 sm:h-14 flex-shrink-0"
                   whileHover={{ scale: 1.05, rotate: 5 }}
                   transition={{ duration: 0.3 }}
                 >
@@ -225,7 +225,7 @@ export default function Testimonials() {
 
               {/* Enhanced Content with smooth reveal */}
               <motion.div 
-                className="mb-4 sm:mb-5"
+                className="mb-2 sm:mb-5"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
